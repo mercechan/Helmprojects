@@ -7,10 +7,11 @@ image:
   tag: latest
   pullPolicy: Always
 service:
-  name: nginx
-  type: ClusterIP
+  name: kitmatic
+  type: NodePort
   externalPort: 80
   internalPort: 80
+  nodePort: 30018
 ingress:
   enabled: false
   # Used to create an Ingress record.
